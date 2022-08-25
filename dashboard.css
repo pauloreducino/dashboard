@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after{
+  padding: 0;margin: 0; box-sizing: border-box;
+}
+
+:root{
+  --main-color: #CC6D58;
+  --main-color-dark: #E18777;
+  --main-color-light: #E18777;
+  --text-color: #fff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  background-color: #E18777;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+ nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: var(--main-color);
+  width: 16rem;
+  padding: 1.8rem 0.8rem;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  transition: width 0.5 ease-in-out;
+ }
+
+ nav::before {
+  content: '';
+  position: absolute;
+  width: 2rem;
+  height: 100%;
+  top: 0;
+  left: 100%;  
+ }
+
+ main {
+  flex: 1;
+  padding: 2rem;
+  color: #1f2027;
+  display: flex;
+  flex-direction: column;  
+ }
+
+ main h1 {
+  margin-bottom: 1rem;
+ }
+
+ main .copyright {
+  color: var(--main-color);
+  font-weight: 500;
+  cursor: pointer;  
+ }
+
+ .slidebar-top {
+  position: relative;
+  display: flex;
+  align-items: center;  
+ }
+
+ .logo {
+  width: 3.5rem;
+  border-radius: 50%;
+ }
+
+ .slidebar-top h3 {
+  padding-left: 0.5rem;
+  font-weight: 600;
+  font-size: 1.15rem;
+ }
+
+ .shrink-btn {
+  position: absolute;
+  top: 50%;
+  height: 27px;
+  padding: 0 0.3rem;
+  background-color: var(--main-color);
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px -3px rgba(70, 46, 118, 0.3);
+  right: -2.6rem;
+  transform: translateY(-50%) translate(-8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+ }
